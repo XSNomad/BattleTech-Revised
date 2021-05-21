@@ -1,0 +1,17 @@
+{
+    "TagManager": {
+        "Enabled": true,
+        "SkirmishWhitelistTags": [
+            "component_type_stock",
+            "disabled_component_type_variant",
+            "disabled_component_type_lostech"
+        ]
+    },
+    "HardpointFix": {
+        "AutoFixChassisDefWeaponHardpointCounts": false,
+        "EnforceHardpointLimits": false
+    },
+    "Performance": {
+        "Enabled": true
+    }
+}
