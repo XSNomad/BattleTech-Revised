@@ -66,7 +66,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\Pilot.cs" />
-    <Compile Include="MadLogger.cs" />
     <Compile Include="MightyChargingJuggernaut.cs" />
     <Compile Include="Holder.cs" />
     <Compile Include="Patches\Coil.cs" />
@@ -85,12 +84,6 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
-rd /s /q $(SolutionDir)..\Release\
-xcopy $(TargetPath) $(SolutionDir)..\Release\$(TargetName)\ /Y
-xcopy $(ProjectDir)mod.json $(SolutionDir)..\Release\$(TargetName)\ /Y
-xcopy $(ProjectDir)README.md $(SolutionDir)..\Release\$(TargetName)\ /Y
-xcopy $(ProjectDir)README.md $(SolutionDir)..\ /Y
-xcopy $(ProjectDir)StreamingAssets\data\abilities\AbilityDefGu8.json $(SolutionDir)..\Release\$(TargetName)\StreamingAssets\data\abilities\ /Y
-	</PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
 </Project>

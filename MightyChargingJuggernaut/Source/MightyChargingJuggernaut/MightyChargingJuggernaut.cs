@@ -17,8 +17,6 @@ namespace MightyChargingJuggernaut
             ModDirectory = directory;
             LogPath = Path.Combine(ModDirectory, "MightyChargingJuggernaut.log");
 
-            Logger.Initialize(LogPath, DebugLevel, ModDirectory, nameof(MightyChargingJuggernaut));
-
             // Harmony calls need to go last here because their Prepare() methods directly check Settings...
             HarmonyInstance harmony = HarmonyInstance.Create("de.mad.MightyChargingJuggernaut");
             harmony.PatchAll(Assembly.GetExecutingAssembly());

@@ -12,7 +12,6 @@ namespace MightyChargingJuggernaut.Extensions
                 isJuggernaut = true;
             if (pilot.PassiveAbilities.Find((Ability a) => a.Def.Description.Name == "JUGGERNAUT") != null)
                 isJuggernaut = true;
-            Logger.Debug("[PilotExtensions_IsJuggernaut] " + pilot.Name + " is a Juggernaut");
             return isJuggernaut;
         }
     }

@@ -13,16 +13,13 @@ namespace MightyChargingJuggernaut.Patches
             {
                 try
                 {
-                    Logger.Info($"[CombatHUDEvasiveBarPips_CacheActorData_POSTFIX] Fields.JuggernautCharges: {Fields.JuggernautCharges}");
                     if (Fields.JuggernautCharges && ___ShouldShowCOILPips)
                     {
                         ___ShouldShowCOILPips = false;
                     }
-                    Logger.Info($"[CombatHUDWeaponSlot_RefreshDisplayedWeapon_PREFIX] ___ShouldShowCOILPips: {___ShouldShowCOILPips}");
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Logger.Error(e);
                 }
             }
         }
@@ -34,16 +31,13 @@ namespace MightyChargingJuggernaut.Patches
             {
                 try
                 {
-                    Logger.Info($"[CombatHUDWeaponSlot_RefreshDisplayedWeapon_PREFIX] Fields.JuggernautCharges: {Fields.JuggernautCharges}");
                     if (Fields.JuggernautCharges && !sprinting)
                     {
                         sprinting = true;
                     }
-                    Logger.Info($"[CombatHUDWeaponSlot_RefreshDisplayedWeapon_PREFIX] sprinting: {sprinting}");
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Logger.Error(e);
                 }
             }
         }

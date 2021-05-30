@@ -90,9 +90,8 @@ namespace MightyChargingJuggernaut.Patches
                         return false;
                     }
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Logger.Error(e);
                     return true;
                 }
             }
@@ -113,17 +112,6 @@ namespace MightyChargingJuggernaut.Patches
                         Pilot pilot = __instance.OwningActor.GetPilot();
                         if (pilot.IsJuggernaut())
                         {
-                            /**
-                             * BEN: MaxCost is essentially the maximal distance the unit could move within current grid.
-                             * As i dont actually set the unit to sprinting or change the grid this method is working on
-                             * __instance.CostLeft is turning negative when a melee target outside the current grid is pathed to.
-                             * This is used to determine if a juggernaut needs to sprint to reach its target.
-                             * Selection of target is made possible in [Pathing_GetMeleeDestsForTarget_PREFIX]
-                            **/
-                            Logger.Debug("[Pathing_UpdateMeleePath_POSTFIX] Pathing MaxCost: " + __instance.MaxCost.ToString());
-                            Logger.Debug("[Pathing_UpdateMeleePath_POSTFIX] Pathing CostLeft: " + __instance.CostLeft.ToString());
-                            Logger.Debug("[Pathing_UpdateMeleePath_POSTFIX] Units MaxWalkDistance: " + __instance.OwningActor.MaxWalkDistance);
-                            Logger.Debug("[Pathing_UpdateMeleePath_POSTFIX] Units MaxSprintDistance: " + __instance.OwningActor.MaxSprintDistance);
 
                             if (__instance.CostLeft < 0)
                             {
@@ -142,9 +130,8 @@ namespace MightyChargingJuggernaut.Patches
                     }
                     //Logger.Debug("[Pathing_Update_POSTFIX] Fields.JuggernautCharges: " + Fields.JuggernautCharges);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
-                    Logger.Error(e);
                 }
             }
         }
